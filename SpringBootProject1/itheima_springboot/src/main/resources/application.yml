@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_test?useSSL=false&&serverTimezone=UTC
+    username: root
+    password: 123456
+
+mybatis:
+  #配置实体类别名包路径
+  type-aliases-package: com.itheima.pojo
+  #配置映射文件路径
+  #mapper-locations: classpath:mappers/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
