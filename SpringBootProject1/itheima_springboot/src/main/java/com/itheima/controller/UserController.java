@@ -9,11 +9,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import tk.mybatis.spring.annotation.MapperScan;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 @RestController
 @MapperScan("com.itheima.mapper")
 public class UserController {
     @Autowired
     private UserService userService;
+
 
     @GetMapping("/hello")
     public String hello(){
@@ -21,7 +25,7 @@ public class UserController {
     }
 
     @GetMapping("/user/{id}")
-    public User queryById(@PathVariable Long id){
+    public User queryById(@PathVariable Long id)  {
         return userService.queryById(id);
     }
 }
