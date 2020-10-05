@@ -70,8 +70,15 @@
             <!--不传递依赖-->
             <optional>true</optional>
         </dependency>
-
-
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+    <packaging>jar</packaging>
 
 </project>

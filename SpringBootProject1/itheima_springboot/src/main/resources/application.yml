@@ -31,3 +31,5 @@ logging:
   level:
     com.itheima: debug
     org.springframework: info
+server:
+  port: 80
