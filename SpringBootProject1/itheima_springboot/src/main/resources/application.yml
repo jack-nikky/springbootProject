@@ -17,6 +17,14 @@ spring:
     validationQuery: SELECT 1 FROM dual
     # 配置监控统计拦截的filters,去掉后，监控界面的sql无法统计
     filters: stat,wall,log4j
+  #RabbitMq配置信息
+  rabbitmq:
+    host: 49.234.93.130
+    port: 5672
+    username: heima
+    password: heima
+    virtual-host: /itcast
+
 
 mybatis:
   #配置实体类别名包路径
@@ -33,3 +41,4 @@ logging:
     org.springframework: info
 server:
   port: 80
+

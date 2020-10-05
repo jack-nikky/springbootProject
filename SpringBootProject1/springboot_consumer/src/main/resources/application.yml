@@ -1,0 +1,7 @@
+spring:
+  rabbitmq:
+    host: 49.234.93.130
+    port: 5672
+    username: heima
+    password: heima
+    virtual-host: /itcast
