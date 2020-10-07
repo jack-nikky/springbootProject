@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>index</title>
+    <!-- Bootstrap core CSS -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link th:href="@{css/hello.css}" href="../static/css/hello.css" rel="stylesheet">
+</head>
+
+<body class="container"  >
+<h2 style="color: #2aabd2" class="center"><a href="https://github.com/jack-nikky/springbootProject">表白墙</a></h2>
+<br/>
+
+<form  th:action="@{/add}" method="post">
+    <input type="text" name="content"   placeholder="Content">
+    <button type="submit" class="btn btn-outline-success">发布</button>
+</form>
+
+<div id="box" >
+    <span  th:each="express:${expresses}" th:text="${express.content}"></span>
+</div>
+<script type="text/javascript">
+    function $(str){return document.getElementById(str);}
+    function init() {
+        var spanarr = $('box').children; //获取父节点中的所有子节点
+        console.log(spanarr);
+        for(var i=0;i<spanarr.length;i++){
+            var hue1 = parseInt(Math.random()*200);
+            var hue2 = parseInt(Math.random()*200);
+            var hue3 = parseInt(Math.random()*200);
+            var hue = 'rgb('+hue1+','+hue2+','+hue3+')';
+            //随机设置弹幕高度
+            var top = parseInt(Math.random()*200)+35;
+            var left = parseInt(Math.random()*1400);
+            top = top < 0 ? 0 : top;
+            //设置弹幕开始出现的位置
+            spanarr[i].style.position = 'absolute';
+            spanarr[i].style.top = top+'px';
+            spanarr[i].style.left = left+'px';
+            spanarr[i].style.fontSize = '20px';
+            //弹幕字的随机颜色
+            spanarr[i].style.color = hue;
+            //span的随机速度
+            var num = parseInt(Math.random()*20);
+            spanarr[i].setAttribute('speed',num);
+            spanarr[i].speed = num;
+        }
+    }
+    //定义一个运动函数
+    function move(){
+        var spanarr = $('box').children; //获取父节点中的所有子节点
+        for(var i=0;i<spanarr.length;i++){
+            if(spanarr[i].style.left<0+'px'){
+                $('box').removeChild(spanarr[i]);
+            }
+            spanarr[i].style.left=parseInt(spanarr[i].style.left)-spanarr[i].speed + 'px';
+        }
+    }
+    init();
+    setInterval(move,200);
+</script>
+</body>
+</html>

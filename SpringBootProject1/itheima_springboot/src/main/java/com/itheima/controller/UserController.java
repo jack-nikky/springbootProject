@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import tk.mybatis.spring.annotation.MapperScan;
 
+import java.util.List;
+
 //@RestController
 @Controller
 @MapperScan("com.itheima.mapper")
@@ -15,7 +17,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/")
+    @RequestMapping("/index")
     public String index(){
         return "index";
     }
