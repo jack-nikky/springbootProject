@@ -1,8 +1,8 @@
 body{
-    background-image: url("../image/img1.jpg");
-    background-size:contain;
+    background-image: url("../image/img2.jpg");
+
     background-attachment: fixed;
-    /*background-size: cover;*/
+    background-size: cover;
     background-repeat: no-repeat;
 }
 form {
