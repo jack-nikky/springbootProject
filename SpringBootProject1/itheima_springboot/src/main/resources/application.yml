@@ -18,11 +18,11 @@ spring:
     port: 6379
     host: 49.234.93.130
     timeout: 500
-    jedis:
+    lettuce:
       pool:
-        max-active: 50
-        max-wait: 5000
-        max-idle: 50
+        max-active: 500
+        max-wait: 500
+        max-idle: 500
         min-idle: 0
 
 
