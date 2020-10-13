@@ -17,7 +17,7 @@ spring:
   redis:
     port: 6379
     host: 49.234.93.130
-    timeout: 500
+    timeout: 5000
     lettuce:
       pool:
         max-active: 500
