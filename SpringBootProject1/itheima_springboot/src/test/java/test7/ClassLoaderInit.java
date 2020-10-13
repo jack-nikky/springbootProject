@@ -2,6 +2,7 @@ package test7;
 
 public class ClassLoaderInit {
     public static void main(String[] args) {
+
         Son son = new Son();
         System.out.println("----end-----");
     }
