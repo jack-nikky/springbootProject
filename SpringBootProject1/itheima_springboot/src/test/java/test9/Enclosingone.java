@@ -13,6 +13,7 @@ class Mytest02{
         Enclosingone.InsideTwo obj2 = new Enclosingone.InsideTwo();//静态内部类对象
 
         Enclosingone oo = new Enclosingone();
+
         Enclosingone.InsideOne insideOne = oo.new InsideOne();
 
     }
