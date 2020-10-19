@@ -24,6 +24,7 @@ spring:
         max-active: 32
         max-wait: 100
         min-idle: 4
+    password: 123123
 
 
 mybatis:
