@@ -3,9 +3,9 @@ spring:
     type:
       com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://49.234.93.130:3306/springboot_test?useSSL=false&&serverTimezone=UTC&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3506/springboot_test?useSSL=false&&serverTimezone=UTC&characterEncoding=utf8
     username: root
-    password: root
+    password: jiaxin123
 
   #RabbitMq配置信息
   rabbitmq:
