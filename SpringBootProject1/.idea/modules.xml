@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/SpringBootProject1.iml" filepath="$PROJECT_DIR$/.idea/SpringBootProject1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itheima_springboot/itheima_springboot.iml" filepath="$PROJECT_DIR$/itheima_springboot/itheima_springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq_consumer/rabbitmq_consumer.iml" filepath="$PROJECT_DIR$/rabbitmq_consumer/rabbitmq_consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq_producer/rabbitmq_producer.iml" filepath="$PROJECT_DIR$/rabbitmq_producer/rabbitmq_producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_consumer/springboot_consumer.iml" filepath="$PROJECT_DIR$/springboot_consumer/springboot_consumer.iml" />
+    </modules>
+  </component>
+</project>
